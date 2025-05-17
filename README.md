@@ -35,6 +35,21 @@ A real-time terminal-based typing-speed game in C. This project features a **mul
    git clone https://github.com/ShaheemJ/MTTypeTestingGame.git
    cd MTTypeTestingGame
 
+   gcc -Wall -Wextra -pedantic -pthread typetestingserver.c -o typetestingserver
+   gcc -Wall -Wextra -pedantic typetestingclient.c -o typetestingclient
+
+
+The server binds to the first available port starting at 4999.
+./typetestingclient <server_ip> <port>
+
+
+/play — Start a 15-second typing test.
+
+/msg <user> <text> — Send a private message.
+
+/broadcast <text> — Broadcast to all users.
+
+/list — Show connected users.
 
 /highscore — Display the all-time top WPM record.
 
